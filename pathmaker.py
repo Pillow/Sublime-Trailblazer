@@ -41,7 +41,8 @@ def makeFilePath(current_file, relative_path):
   newpath = parsePath(current_file, relative_path)
   split = os.path.split(newpath)
   makePath(split[0])
-  if os.path.splitext(relative_path)[1]:
-    makeFile(newpath)
-  else:
-    makeFile(newpath + os.path.splitext(current_file)[1])
+  if not os.path.splitext(relative_path)[1]:
+    newpath = newpath + os.path.splitext(current_file)[1]
+
+  makeFile(newpath)
+  return newpath

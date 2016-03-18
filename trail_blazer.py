@@ -16,4 +16,5 @@ class TrailBlazerCommand(sublime_plugin.TextCommand):
     else:
       selected_text = self.get_selected_text()
 
-    makeFilePath(self.view.file_name(), selected_text)
+    file = makeFilePath(self.view.file_name(), selected_text)
+    self.view.window().open_file(file)
