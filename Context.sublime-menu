@@ -2,6 +2,22 @@
   {
     "id": "TrailBlazer",
     "caption": "Create file with TrailBlazer",
-    "command": "trail_blazer"
+    "command": "trail_blazer",
+    "children": [
+      {
+        "caption": "current file's extension",
+        "command": "trail_blazer"
+      },
+      {
+        "caption": ".js",
+        "args": {"extension": ".js"},
+        "command": "trail_blazer"
+      },
+      {
+        "caption": ".py",
+        "args": {"extension": ".py"},
+        "command": "trail_blazer"
+      }
+    ]
   }
 ]
