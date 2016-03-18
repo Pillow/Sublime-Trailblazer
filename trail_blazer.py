@@ -12,7 +12,7 @@ class TrailBlazerCommand(sublime_plugin.TextCommand):
 
   def run(self, edit, **args):
     if args and args['extension']:
-      selected_text = "{}{}".format(self.get_selected_text(), args['extension'])
+      selected_text = self.get_selected_text() + args['extension']
     else:
       selected_text = self.get_selected_text()
 
