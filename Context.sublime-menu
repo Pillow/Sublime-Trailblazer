@@ -5,7 +5,7 @@
     "command": "trail_blazer",
     "children": [
       {
-        "caption": "current file's extension",
+        "caption": "Current File's Extension",
         "command": "trail_blazer"
       },
       {
@@ -16,6 +16,11 @@
       {
         "caption": ".py",
         "args": {"extension": ".py"},
+        "command": "trail_blazer"
+      },
+      {
+        "caption": ".rb",
+        "args": {"extension": ".rb"},
         "command": "trail_blazer"
       }
     ]
