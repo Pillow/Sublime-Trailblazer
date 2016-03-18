@@ -10,6 +10,6 @@ class TrailBlazerCommand(sublime_plugin.TextCommand):
 
     return s
 
-  def run(self, edit ):
+  def run(self, edit):
     selected_text = self.get_selected_text()
     makeFilePath(self.view.file_name(), selected_text)
